@@ -1,0 +1,73 @@
+.container {
+    width: 100%;
+    /* background-color: brown; */
+    text-align: center;
+    padding: 20px;
+    flex: 1; /* Permite que o container de projetos ocupe o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Permite rolagem vertical se o conteúdo exceder a altura disponível */
+}
+
+.container h1 span {
+    color: red;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+
+}
+
+.categories button {
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+
+.projects {
+    width: 80%;
+    margin-top: 40px;
+    /* background-color: darkkhaki; */
+    display: grid; /* Usa grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de tamanho igual */
+    gap: 10px; /* Espaçamento entre os itens */
+    flex: 1; /* Permite que a área de projetos ocupe o espaço disponível */
+    border-radius: 4px;
+}
+
+.project-item {
+    width: 180px;
+    height: 180px;
+    background-color: lightgray;
+    /* padding: 20px; */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 900px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr); /* 2 colunas para telas menores */
+    }
+}
+
+@media (max-width: 600px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);/* 1 coluna para telas muito pequenas */
+    }
+}
