@@ -5,6 +5,11 @@ export default function CardHoverEffectDemo() {
   return (
     <div className="max-w-5xl mx-auto px-8">
       <HoverEffect items={projects} />
+      <div className="w-full mb-5 flex items-center justify-center">
+        <button className="bg-neutral-900 p-2 rounded-full px-5">
+          Ver Mais
+        </button>
+      </div>
     </div>
   );
 }

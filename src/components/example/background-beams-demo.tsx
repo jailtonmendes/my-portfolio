@@ -4,7 +4,7 @@ import { BackgroundBeams } from "../ui/background-beams";
 export default function BackgroundBeamsDemo() {
   return (
     <div className="h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-      <div className="max-w-2xl mx-auto p-4">
+      <div className="max-w-2xl mx-auto p-4 flex-1 flex flex-col items-center justify-center ">
         <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
           Jailton Mendes
         </h1>
@@ -16,6 +16,11 @@ export default function BackgroundBeamsDemo() {
           em busca de novos conhecimentos e desafios que me permitam crescer
           pessoal e profissionalmente.
         </p>
+      </div>
+      <div className="h-[80px] flex">
+        <h3 className="text-neutral-500 text-lg font-semibold">
+          Conhecimentos / Habilidades
+        </h3>
       </div>
       <BackgroundBeams />
 

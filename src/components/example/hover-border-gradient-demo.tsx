@@ -4,14 +4,14 @@ import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 export default function HoverBorderGradientDemo() {
   return (
-    <div className="m-10  flex justify-center text-center">
+    <div className="m-10  items-center flex justify-center text-center">
       <HoverBorderGradient
         containerClassName="rounded-full"
         as="button"
-        className="dark:bg-black -mb-2 text-white dark:text-white flex items-center justify-center"
+        className="dark:bg-black px-8 text-white dark:text-white flex items-center justify-center"
       >
         <AceternityLogo />
-        <span>Habilidades</span>
+        <span>Projetos</span>
       </HoverBorderGradient>
     </div>
   );

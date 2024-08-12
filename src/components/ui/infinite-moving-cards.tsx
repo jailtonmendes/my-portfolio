@@ -14,6 +14,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    icone: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -60,20 +61,22 @@ export const InfiniteMovingCards = ({
   };
   const getSpeed = () => {
     if (containerRef.current) {
+      containerRef.current.style.setProperty("--animation-duration", "80s");
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
         containerRef.current.style.setProperty("--animation-duration", "80s");
       }
+      // else if (speed === "normal") {
+      //   containerRef.current.style.setProperty("--animation-duration", "40s");
+      // } else {
+      //   containerRef.current.style.setProperty("--animation-duration", "80s");
+      // }
     }
   };
   return (
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20  max-w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] ",
         className
       )}
     >
@@ -85,9 +88,9 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <li
-            className="w-[300px] max-w-full relative rounded-lg border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[200px]"
+            className="w-[200px] max-w-full relative rounded-lg border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[200px]"
             style={{
               background:
                 "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
@@ -99,7 +102,8 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">
+              <span className=" relative z-20 leading-[1.6] text-gray-100 font-normal text-base">
+                {item.icone}
                 {item.quote}
               </span>
               {/* <div className="relative z-20 mt-6 flex flex-row items-center">
