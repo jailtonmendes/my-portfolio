@@ -1,4 +1,3 @@
-import React from "react";
 import { HoverEffect } from "../ui/card-hover-effect";
 
 export default function CardHoverEffectDemo() {

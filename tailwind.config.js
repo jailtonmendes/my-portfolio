@@ -18,6 +18,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        barlow: ["Barlow Condensed", "sans-serif"],
+      },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
         scroll:

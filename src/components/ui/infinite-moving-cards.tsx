@@ -6,7 +6,6 @@ import React, { useEffect, useState } from "react";
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
-  speed = "fast",
   pauseOnHover = true,
   className,
 }: {
@@ -61,10 +60,10 @@ export const InfiniteMovingCards = ({
   };
   const getSpeed = () => {
     if (containerRef.current) {
-      containerRef.current.style.setProperty("--animation-duration", "80s");
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
+      containerRef.current.style.setProperty("--animation-duration", "100s");
+      // if (speed === "fast") {
+      //   containerRef.current.style.setProperty("--animation-duration", "80s");
+      // }
       // else if (speed === "normal") {
       //   containerRef.current.style.setProperty("--animation-duration", "40s");
       // } else {
@@ -72,6 +71,7 @@ export const InfiniteMovingCards = ({
       // }
     }
   };
+  
   return (
     <div
       ref={containerRef}
@@ -90,7 +90,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <li
-            className="w-[200px] max-w-full relative rounded-lg border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[200px]"
+            className="w-[200px] max-w-full relative rounded-lg border border-b-0 flex-shrink-0 border-slate-700 px-4 py-4 md:w-[180px]"
             style={{
               background:
                 "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
@@ -103,19 +103,9 @@ export const InfiniteMovingCards = ({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
               <span className=" relative z-20 leading-[1.6] text-gray-100 font-normal text-base">
-                {item.icone}
+              <img src={`/assets/${item.icone}.svg`} alt="Icone" className="inline-block h-10 w-10 mr-2" />
                 {item.quote}
               </span>
-              {/* <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.name}
-                  </span>
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.title}
-                  </span>
-                </span>
-              </div> */}
             </blockquote>
           </li>
         ))}
