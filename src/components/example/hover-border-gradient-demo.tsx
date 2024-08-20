@@ -10,7 +10,7 @@ export default function HoverBorderGradientDemo() {
         className="bg-[#1C2638] px-8 text-white dark:text-white flex items-center justify-center"
       >
         <AceternityLogo />
-        <span>Projeto em desenvolvimento</span>
+        <span>Ver mais</span>
       </HoverBorderGradient>
     </div>
   );

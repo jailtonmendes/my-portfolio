@@ -93,4 +93,22 @@ const testimonials = [
     name: "Herman Melville",
     title: "Moby-Dick",
   },
+  {
+    quote: "Figma",
+    icone: "figma",
+    name: "Herman Melville",
+    title: "Moby-Dick",
+  },
+  {
+    quote: "Photoshop",
+    icone: "photoshop",
+    name: "Herman Melville",
+    title: "Moby-Dick",
+  },
+  {
+    quote: "Illustrator",
+    icone: "illustrator",
+    name: "Herman Melville",
+    title: "Moby-Dick",
+  },
 ];

@@ -18,8 +18,8 @@ export default function BackgroundBeamsDemo() {
         </div>
         </div>
       </div>
-      <div className="h-[80px] flex">
-        <p className="text-stone-300 text-3xl font-semibold font-barlow">
+      <div className="h-[100px] flex">
+        <p className="text-[#D9D9D9] text-3xl font-semibold font-barlow">
           Conhecimentos / Habilidades
         </p>
       </div>
